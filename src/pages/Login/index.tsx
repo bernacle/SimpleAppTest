@@ -10,7 +10,7 @@ const Login: React.FC = () => {
   const [name, setName] = useState("");
 
   const fakeLogin = useCallback(() => {
-    navigation.navigate("Home")
+    navigation.navigate("Home", { info: "passed" })
   }, [navigation])
 
   const nameInvalid = useMemo(() => {
@@ -20,6 +20,7 @@ const Login: React.FC = () => {
   return (
     <View style={styles.container}>
       <TextInput
+        testID="input"
         style={styles.textInput}
         placeholder="Name"
         autoCapitalize="none"

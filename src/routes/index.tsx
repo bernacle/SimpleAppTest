@@ -3,15 +3,17 @@ import { createStackNavigator } from "@react-navigation/stack";
 import Login from "../pages/Login";
 import Home from "../pages/Home";
 
-const App = createStackNavigator();
+const { Screen, Navigator } = createStackNavigator();
 
-export const Routes: React.FC = () => (
-    <App.Navigator
+const Routes: React.FC = () => (
+    <Navigator
         screenOptions={{
             headerShown: false,
         }}
     >
-        <App.Screen name="Login" component={Login} />
-        <App.Screen name="Home" component={Home} />
-    </App.Navigator>
+        <Screen name="Login" component={Login} />
+        <Screen name="Home" component={Home} />
+    </Navigator>
 );
+
+export default Routes
