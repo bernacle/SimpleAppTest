@@ -11,7 +11,7 @@ export const Routes: React.FC = () => (
             headerShown: false,
         }}
     >
-        <App.Screen name="Home" component={Home} />
         <App.Screen name="Login" component={Login} />
+        <App.Screen name="Home" component={Home} />
     </App.Navigator>
 );

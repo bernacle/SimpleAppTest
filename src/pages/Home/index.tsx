@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { Text } from 'react-native';
+import { View, Text } from 'react-native';
 
-import { Container } from './styles';
+import { styles } from './styles';
 
 const Home: React.FC = () => {
   return (
-    <Container>
-      <Text>Home</Text>
-    </Container>
+    <View style={styles.container}>
+      <Text style={styles.text}>
+        You just fake logged in
+      </Text>
+    </View>
   );
 };
 
